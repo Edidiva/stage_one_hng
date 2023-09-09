@@ -26,8 +26,8 @@ router.get('/', (req, res)=>{
             "current_day": day,
             "utc_time": utc_time,
             "track": track,
-            "github_file_url":"https://github.com/Edidiva/stage_one_hng",
-            "github_repo_url":"https://github.com/Edidiva/stage_one_hng/blob/main/app.js",
+            "github_file_url":"https://github.com/Edidiva/stage_one_hng/blob/main/app.js",
+            "github_repo_url":"https://github.com/Edidiva/stage_one_hng",
             "status_code":200
         }
        )
