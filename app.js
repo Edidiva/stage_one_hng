@@ -17,15 +17,15 @@ router.get('/', (req, res)=>{
       const date = new Date();
       const day = weekdays[date.getDay()];
     
-      const utc_time = date.toISOString;
+      const utc_time = date.toISOString();
        res.status(200).json(
         {
             "slack_name": slack_name,
             "current_day": day,
             "utc_time": utc_time,
             "track": track,
-            "github_file_url":"",
-            "github_repo_url":"",
+            "github_file_url":"https://github.com/Edidiva/stage_one_hng",
+            "github_repo_url":"https://github.com/Edidiva/stage_one_hng/blob/main/app.js",
             "status_code":200
         }
        )
