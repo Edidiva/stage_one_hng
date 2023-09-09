@@ -11,7 +11,10 @@ router.get('/', (req, res)=>{
      const track = req.query.track;
 
      if (!slack_name || !track) {
-      console.log("Pls provide your slack name and track");
+      return res.status(400).json({
+        "error": "Both slack_name and track are required."
+    });
+
      }
       const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       const date = new Date();
