@@ -19,7 +19,7 @@ router.get('/', (req, res)=>{
       const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       const date = new Date();
       const day = weekdays[date.getDay()];
-      const utc_time = date.toISOString();
+      const utc_time = date.toISOString().slice(0, -5) + 'Z';
        res.status(200).json(
         {
             "slack_name": slack_name,
