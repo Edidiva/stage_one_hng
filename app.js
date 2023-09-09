@@ -18,8 +18,8 @@ router.get('/', (req, res)=>{
      }
       const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       const date = new Date();
+      date.setTime(date.getTime() + 60 * 60 * 1000);
       const day = weekdays[date.getDay()];
-    
       const utc_time = date.toISOString();
        res.status(200).json(
         {
